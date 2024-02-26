@@ -9,6 +9,8 @@ import Scanner from '../../scanner/token'
 export default class ArithmeticParser {
     constructor(expr) {
         this.expr = expr
+        //this scanner is used to get all tokens at once
+        this.init_scanner = new Scanner(expr);
         this.scanner = new Scanner(expr);
         //save all tokens for given expression
         this.tokens = []
@@ -17,7 +19,7 @@ export default class ArithmeticParser {
     getExprTokens = () => {
         //get tokens util we meet SEMICOLON
         while (true) {
-            const token_obj = this.scanner.scan()
+            const token_obj = this.init_scanner.scan()
             if (token_obj.token !== Scanner.EOF) {
                 this.tokens.push(token_obj)
             } else {
