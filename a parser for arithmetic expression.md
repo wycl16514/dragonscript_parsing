@@ -156,6 +156,7 @@ const TerminalEmulator = () => {
 }
 ```
 then we can use the arithparse command like following:
+
 <img width="489" alt="截屏2024-02-27 13 25 46" src="https://github.com/wycl16514/dragonscript_parsing/assets/7506958/48b535db-c232-4e3f-8cc3-6d9b461c22af">
 
 There are some problems we need to handle:
